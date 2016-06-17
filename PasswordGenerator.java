@@ -60,8 +60,8 @@ public class PasswordGenerator extends JFrame
 	 * B. start the while loop using the defined size and checking
 	 * the string length in order to decide to continue
 	 * C. Creates a new instance of the random class which
-	 * uses 0 and 1 for deciding on lowercase ascii chars or uppercase
-	 * 0 is for lowercase and 1 is for uppercase
+	 * creates a random number between 0 and 2 
+	 * for deciding on lower or uppecase and numbers.
 	 * */
 	private class generatePwButton implements ActionListener
 	{
