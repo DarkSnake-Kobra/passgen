@@ -10,3 +10,4 @@ cd build/temp
 jar -cfm ../PasswordGenerator.jar Manifest.txt *.class
 cd ..
 rm -r temp
+chmod u+x  PasswordGenerator.jar
