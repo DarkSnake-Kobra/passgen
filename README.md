@@ -12,6 +12,8 @@ make the jar file(same folder as the build scripts) and remove the temp dir.
 
 # FAQ
 
-File Not Found Exception means the config file is missing. Do a git clone https://github.com/DarkSnake-Kobra/password-generator.git
-and copy the config file over to where the jar file is from the data folder or make a new file named "config" without a file type
-and put a number such as 20 etc. Decimals will cause the program to fail.
+File Not Found Exception means the config file is missing. 
+Do a git clone https://github.com/DarkSnake-Kobra/password-generator.git
+and copy the config file over to where the jar file is from the data folder or make a new file named "config" 
+without a file extension (no .txt, .doc no nothing) and put a number such as 20 etc. 
+Decimals will cause the program to fail.
