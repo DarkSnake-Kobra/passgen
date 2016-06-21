@@ -4,8 +4,10 @@ javac PasswordGenerator.java
 mv *.class ../build/temp
 cd ../data
 cp Manifest.txt ..
+cp config ..
 cd ..
 mv Manifest.txt build/temp
+mv config build
 cd build/temp
 jar -cfm ../PasswordGenerator.jar Manifest.txt *.class
 cd ..

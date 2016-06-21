@@ -17,6 +17,8 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.event.*;
+import java.io.*;
+import javax.swing.JOptionPane;
 
 public class PasswordGenerator extends JFrame
 {
@@ -57,9 +59,12 @@ public class PasswordGenerator extends JFrame
 	}
 	/* Following class generates the password:
 	 * A. starts by declaring variables
-	 * B. start the while loop using the defined size and checking
+	 * B. Store the contents of a configuration file
+	 * in the size variable rather then hard code the
+	 * password size into the size variable.
+	 * C. start the while loop using the defined size and checking
 	 * the string length in order to decide to continue
-	 * C. Creates a new instance of the random class which
+	 * D. Creates a new instance of the random class which
 	 * creates a random number between 0 and 2 
 	 * for deciding on lower or uppecase and numbers.
 	 * */
@@ -71,8 +76,21 @@ public class PasswordGenerator extends JFrame
 			int casing;
 			
 			String password = "";
-			int size = 16;
+			int size = 0;
+			try
+			{
+				File file = new File("config");
+				Scanner inputFile = new Scanner(file);
 			
+				size = inputFile.nextInt();
+				inputFile.close();
+				System.out.println(size);
+			}
+			catch (FileNotFoundException d)
+			{
+				JOptionPane.showMessageDialog(null, d.getMessage());
+				System.exit(0);
+			}
 			while(password.length() < size)
 			{
 				Random number = new Random();
