@@ -84,7 +84,6 @@ public class PasswordGenerator extends JFrame
 			
 				size = inputFile.nextInt();
 				inputFile.close();
-				System.out.println(size);
 			}
 			catch (FileNotFoundException d)
 			{
@@ -114,6 +113,22 @@ public class PasswordGenerator extends JFrame
 				
 			}
 			passBox.setText(password);
+			
+			// call function to write to log
+			String text = "";
+			try
+			{
+				text = passBox.getText();
+				FileWriter log = new FileWriter("log", true);
+				PrintWriter logFile = new PrintWriter(log);
+				logFile.println(text);
+				logFile.close();
+			}
+			catch(IOException f)
+			{
+				JOptionPane.showMessageDialog(null, f.getMessage());
+				System.exit(0);
+			}
 		
 		}
 	}	
