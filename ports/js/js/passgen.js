@@ -10,7 +10,7 @@ function passGen()
 	
 	while(count < size)
 	{
-		temp = Math.floor((Math.random() * charLength) + 0);
+		temp = Math.floor((Math.random() * charLength));
 		password += characters.charAt(temp);
 		count++;
 	}
