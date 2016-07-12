@@ -97,7 +97,7 @@ public class PasswordGenerator extends JFrame
 			}
 			while(count < size)
 			{
-				temp = (int) (Math.random() * charLength + 0);
+				temp = (int) (Math.random() * charLength);
 				cTemp = characters.charAt(temp);
 				password = password + Character.toString(cTemp);
 				count++;
