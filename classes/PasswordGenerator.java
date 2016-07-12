@@ -76,7 +76,12 @@ public class PasswordGenerator extends JFrame
 			int casing;
 			
 			String password = "";
+			String characters = "01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			int charLength = characters.length();
 			int size = 0;
+			int count = 0;
+			int temp;
+			char cTemp;
 			try
 			{
 				File file = new File("config");
@@ -90,27 +95,12 @@ public class PasswordGenerator extends JFrame
 				JOptionPane.showMessageDialog(null, d.getMessage());
 				System.exit(0);
 			}
-			while(password.length() < size)
+			while(count < size)
 			{
-				Random number = new Random();
-				casing = number.nextInt(3);
-				
-				if (casing == 0)
-				{
-					c = (char) (Math.random() * 26 + 97);
-					password = password + c;
-				}
-				if(casing == 1)
-				{
-					c = (char) (Math.random() * 9 + 48);
-					password = password + c;
-				}
-				else
-				{
-					c = (char) (Math.random() * 26 + 65);
-					password = password + c;
-				}
-				
+				temp = (int) (Math.random() * charLength + 0);
+				cTemp = characters.charAt(temp);
+				password = password + Character.toString(cTemp);
+				count++;
 			}
 			passBox.setText(password);
 			
