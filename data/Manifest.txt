@@ -1,1 +1,1 @@
-Main-Class: PasswordGenerator
+Main-Class: passgen

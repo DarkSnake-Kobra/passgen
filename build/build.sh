@@ -1,6 +1,6 @@
 mkdir temp
 cd ../classes
-javac PasswordGenerator.java
+javac passgen.java
 mv *.class ../build/temp
 cd ../data
 cp Manifest.txt ..
@@ -9,7 +9,7 @@ cd ..
 mv Manifest.txt build/temp
 mv config build
 cd build/temp
-jar -cfm ../PasswordGenerator.jar Manifest.txt *.class
+jar -cfm ../passgen.jar Manifest.txt *.class
 cd ..
 rm -r temp
-chmod u+x  PasswordGenerator.jar
+chmod u+x  passgen.jar

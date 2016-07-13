@@ -20,7 +20,7 @@ import java.awt.event.*;
 import java.io.*;
 import javax.swing.JOptionPane;
 
-public class PasswordGenerator extends JFrame
+public class passgen extends JFrame
 {
 	private JTextField passBox;
 	private JButton generatePw;
@@ -29,7 +29,7 @@ public class PasswordGenerator extends JFrame
 	final int WINDOW_WIDTH = 310;
 	final int WINDOW_HEIGHT = 100;
 	
-	public PasswordGenerator()
+	public passgen()
 	{
 		setTitle("Password Generator");
 		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -133,6 +133,6 @@ private class closeButton implements ActionListener
 	
 	public static void main(String[] args)
 	{
-		new PasswordGenerator();
+		new passgen();
 	}
 }
