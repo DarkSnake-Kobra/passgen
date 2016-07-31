@@ -6,6 +6,6 @@ Don't expect much or it to do a whole lot. Written in java 8, but making another
 Placed under the Apache 2 license.
 
 # Branches
-*java - currently the main build
-*js - javascript port
-*nodejs - test branch for node.js with electron build
+*java - currently the main build__
+*js - javascript port__
+*nodejs - test branch for node.js with electron build__
