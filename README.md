@@ -9,4 +9,4 @@ Not available yet.
 
 
 # FAQ
-Thi s is a simple js port with an html interface.
+This is a simple js port with an html interface. Shortly I'll be doing an overhaul of the html pages.

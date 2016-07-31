@@ -1,3 +1,0 @@
-Few minor notes that should be mentioned.
-
-1. By default the password is set to a length of 20. You will need to edit the line "var size = 20;" and change then number to your preference.
