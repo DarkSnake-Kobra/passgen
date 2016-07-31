@@ -8,4 +8,4 @@ Placed under the Apache 2 license.
 # Branches
 *java - currently the main build <br />
 *js - javascript port <br />
-*nodejs - test branch for node.js with electron build
+*nodejs - test branch for node.js with electron build <br />
