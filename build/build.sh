@@ -4,10 +4,10 @@ javac passgen.java
 mv *.class ../build/temp
 cd ../data
 cp Manifest.txt ..
-cp config ..
+cp .passgen_config ..
 cd ..
 mv Manifest.txt build/temp
-mv config build
+mv .passgen_config build
 cd build/temp
 jar -cfm ../passgen.jar Manifest.txt *.class
 cd ..

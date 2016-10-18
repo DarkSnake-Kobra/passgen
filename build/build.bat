@@ -4,10 +4,10 @@ javac passgen.java
 move *.class ../build/temp
 cd ../data
 copy Manifest.txt ..
-copy config ..
+copy .passgen_config ..
 cd ..
 move Manifest.txt build/temp
-move config build
+move .passgen_config build
 cd build/temp
 jar -cfm ../passgen.jar Manifest.txt *.class
 cd ..

@@ -84,7 +84,7 @@ public class passgen extends JFrame
 			char cTemp;
 			try
 			{
-				File file = new File("config");
+				File file = new File(".passgen_config");
 				Scanner inputFile = new Scanner(file);
 			
 				size = inputFile.nextInt();
@@ -109,7 +109,7 @@ public class passgen extends JFrame
 			try
 			{
 				text = passBox.getText();
-				FileWriter log = new FileWriter("log", true);
+				FileWriter log = new FileWriter(".passgen_log", true);
 				PrintWriter logFile = new PrintWriter(log);
 				logFile.println(text);
 				logFile.close();
