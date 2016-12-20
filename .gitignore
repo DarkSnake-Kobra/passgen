@@ -1,0 +1,6 @@
+# ignored dirs
+testing
+playground
+
+# ignored backup files
+*.~
