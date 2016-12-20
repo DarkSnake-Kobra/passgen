@@ -1,6 +1,6 @@
 # Password-Generator js branch
-This is an electron build. There is a very minimal working build, but it's not near as complete
-as the java version.
+This is an electron build. Note this is a very minimal build and not quite as
+complete as the java build.
 
 # License
 Placed under the Apache 2 license.
