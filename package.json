@@ -1,5 +1,23 @@
 {
-  "name"    : "test",
-  "version" : "0.1.0",
-  "main"    : "main.js"
+  "name": "password generator",
+  "version": "0.1.0",
+  "main": "passgen.js",
+  "dependencies": {
+    "electron": "^1.4.12"
+  },
+  "description": "Simple password generator",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkSnake-Kobra/passgen.git"
+  },
+  "author": "Jordan Bottoms",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/DarkSnake-Kobra/passgen/issues"
+  },
+  "homepage": "https://github.com/DarkSnake-Kobra/passgen#readme"
 }

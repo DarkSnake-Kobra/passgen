@@ -1,4 +1,5 @@
 # ignored dirs
+node_modules
 testing
 playground
 

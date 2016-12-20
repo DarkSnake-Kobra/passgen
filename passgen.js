@@ -1,47 +1,52 @@
-function passGen()
-{
-	var characters = "01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var charLength = characters.length;
+const {app, BrowserWindow} = require('electron')
+const path = require('path')
+const url = require('url')
 
-	var size;
-	var count = 0;
-	var temp;
-	var password = "";
+// Keep a global reference of the window object, if you don't, the window will
+// be closed automatically when the JavaScript object is garbage collected.
+let win
 
-	size = document.getElementById('size').value;
-	while(count < size)
-	{
-		temp = Math.floor((Math.random() * charLength));
-		password += characters.charAt(temp);
-		count++;
-	}
-	document.getElementById('password').value= password;
+function createWindow () {
+  // Create the browser window.
+  win = new BrowserWindow({width: 800, height: 600})
+
+  // and load the index.html of the app.
+  win.loadURL(url.format({
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  // Emitted when the window is closed.
+  win.on('closed', () => {
+    // Dereference the window object, usually you would store windows
+    // in an array if your app supports multi windows, this is the time
+    // when you should delete the corresponding element.
+    win = null
+  })
 }
 
-function reset()
-{
-	document.getElementById('password').value= "";
-}
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+// Some APIs can only be used after this event occurs.
+app.on('ready', createWindow)
 
-function homePage()
-{
-	alert("Currently broken");
-	//window.open("index.html"," _blank");
-}
-function webSite()
-{
-	alert("Currently broken");
-	//window.open("http://www.dsksblog.com/index.html"," _self");
-}
-function aboutPage()
-{
-	alert("Currently broken");
-	//window.open("about.html", "_self");
-}
+// Quit when all windows are closed.
+app.on('window-all-closed', () => {
+  // On macOS it is common for applications and their menu bar
+  // to stay active until the user quits explicitly with Cmd + Q
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
 
-function footer()
-{
+app.on('activate', () => {
+  // On macOS it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (win === null) {
+    createWindow()
+  }
+})
 
-	document.getElementById("footer").innerHTML = ('<p style="text-align: left">Copyright (c) 2016 Jordan Bottoms' +
-			'</br>Released under the Apache 2 License</p>');
-}
+// In this file you can include the rest of your app's specific main process
+// code. You can also put them in separate files and require them here.
