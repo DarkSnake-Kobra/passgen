@@ -6,7 +6,14 @@ complete as the java build.
 Placed under the Apache 2 license.
 
 # Building
-Not available yet.
+see build directory for bash script.
 
+
+# Todo
+* Add add config file
+* Fix broken buttons
+* Add log file for created passwords
+* Replace default menu
+* Make it pretty (white theme is ugly)
 
 # FAQ
