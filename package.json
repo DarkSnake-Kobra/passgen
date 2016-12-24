@@ -1,9 +1,10 @@
 {
-  "name": "password generator",
+  "name": "passgen",
+  "productName": "Simple Password Generator",
   "version": "0.1.0",
   "main": "passgen.js",
   "dependencies": {
-    "electron": "^1.4.12"
+    "electron": "^1.4.13"
   },
   "description": "Simple password generator",
   "devDependencies": {},
