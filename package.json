@@ -1,6 +1,6 @@
 {
   "name": "passgen",
-  "productName": "Simple Password Generator",
+  "productName": "passgen",
   "version": "0.1.0",
   "main": "passgen.js",
   "dependencies": {
