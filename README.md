@@ -5,8 +5,9 @@ complete as the java build.
 # License
 Placed under the Apache 2 license.
 
-# Building
-see build directory for bash script.
+# Build Commands
+Windows - electron-packager . --platform=win32 --arch=x64
+Linux sudo ./node_modules/.bin/electron-packager . --platform=linux --arch=x64
 
 
 # Todo
