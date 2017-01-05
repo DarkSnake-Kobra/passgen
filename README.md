@@ -6,16 +6,16 @@ complete as the java build.
 Placed under the Apache 2 license.
 
 # Build Commands
-Windows - electron-packager . --platform=win32 --arch=x64
-Linux sudo ./node_modules/.bin/electron-packager . --platform=linux --arch=x64
+*Windows - electron-packager . --platform=win32 --arch=x64
+*Linux sudo ./node_modules/.bin/electron-packager . --platform=linux --arch=x64
 
 # Requirements
-Windows/Linux
-Nodejs 7.x
+*Windows/Linux
+*Nodejs 7.x
 
 # Required Node Modules
-electron
-electron-packager
+*electron
+*electron-packager
 
 # Todo
 * Add add config file
