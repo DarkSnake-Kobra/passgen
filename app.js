@@ -1,47 +1,56 @@
 function passGen()
 {
-	var characters = "01234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var charLength = characters.length;
+
+	// store letters and get length
+	var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+	// store numbers and get length
+	var numbers = "0123456789"
 
 	var size;
 	var count = 0;
 	var temp;
 	var password = "";
+	var numbersState;
+	var holdChar = "";
+	var holdCharLength;
 
 	size = document.getElementById('size').value;
+	numbersState = document.getElementById('numbers').checked;
+
+	if (numbersState == true)
+	{
+		holdChar = numbers + letters;
+		holdCharLength = holdChar.length;
+	}
+	else
+	{
+		holdChar = letters;
+		holdCharLength = holdChar.length
+	}
+
 	while(count < size)
 	{
-		temp = Math.floor((Math.random() * charLength));
-		password += characters.charAt(temp);
-		count++;
+	  temp = Math.floor((Math.random() * holdCharLength));
+	  password += holdChar.charAt(temp);
+	  count++;
 	}
 	document.getElementById('password').value= password;
-}
+	}
 
 function reset()
 {
 	document.getElementById('password').value= "";
 }
 
-function homePage()
+function about()
 {
-	alert("Currently broken");
-	//window.open("index.html"," _blank");
-}
-function webSite()
-{
-	alert("Currently broken");
-	//window.open("http://www.dsksblog.com/index.html"," _self");
-}
-function aboutPage()
-{
-	alert("Currently broken");
-	//window.open("about.html", "_self");
+	alert("Copyright (c) 2017 Jordan Bottoms\n" +
+	"Released under the Apache 2 License\n" +
+	"Website: jordanbottoms.com");
 }
 
-function footer()
+function closeWin()
 {
-
-	document.getElementById("footer").innerHTML = ('<p style="text-align: left">Copyright (c) 2016 Jordan Bottoms' +
-			'</br>Released under the Apache 2 License</p>');
+	window.close();
 }

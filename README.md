@@ -1,6 +1,6 @@
-# Password-Generator js branch
-This is an electron build. Note this is a very minimal build and not quite as
-complete as the java build.
+# Test branch
+This is a nodejs with electron build. The plan is to replace
+the java build in the future. There is still a bit to work on.
 
 # License
 Placed under the Apache 2 license.
@@ -18,7 +18,7 @@ Placed under the Apache 2 license.
 * electron-packager
 
 # Todo
-* Add add config file
+* Add config file
 * Fix broken buttons
 * Add log file for created passwords
 * Replace default menu
