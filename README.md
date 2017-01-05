@@ -19,9 +19,7 @@ Placed under the Apache 2 license.
 
 # Todo
 * Add config file
-* Fix broken buttons
 * Add log file for created passwords
-* Replace default menu
 * Make it pretty (white theme is ugly)
 
 # FAQ
