@@ -1,7 +1,8 @@
-# ignored dirs
+# ignore build and other local directories
 node_modules
-testing
-playground
+passgen-linux-x64
+passgen-win-x64
 
-# ignored backup files
+
+# ignore backup files
 *.~
