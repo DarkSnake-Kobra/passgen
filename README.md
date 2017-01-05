@@ -6,8 +6,8 @@ the java build in the future. There is still a bit to work on.
 Placed under the Apache 2 license.
 
 # Build Commands
-* Windows - electron-packager . --platform=win32 --arch=x64
-* Linux sudo ./node_modules/.bin/electron-packager . --platform=linux --arch=x64
+* electron-packager . --platform=win32 --arch=x64
+* sudo ./node_modules/.bin/electron-packager . --platform=linux --arch=x64
 
 # Requirements
 * Windows/Linux
