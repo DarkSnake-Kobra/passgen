@@ -17,13 +17,15 @@
 					<input name="size" id="size" value="20"/><br>
 
 					<label for="password">Password is:</label>
-					<input name="password" id="password"/>
+					<input name="password" id="password" title="Alphabetical characters will always be generated regardless and at the very least if no option is selected."/>
 			</fieldset>
 			<fieldset id="options" class="options">
 				<label for="numbers">Numbers</label>
 				<input type="checkbox" id="numbers" name="numbers" value="0" checked="checked">
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" id="symbols" name="symbols" value="0">
 			</fieldset>
-			<button onclick="passGen()">Create Password</button>
+			<button onclick="PASSGEN()">Create Password</button>
 			<button onclick="reset()">Clear</button>
 			<button onclick="about()">About</button>
 			<button onclick="closeWin()">Close</button>

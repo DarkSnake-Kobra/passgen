@@ -1,8 +1,9 @@
 # ignore build and other local directories
 node_modules
-passgen-linux-x64
-passgen-win-x64
+passgen-linux-x64/*
+passgen-win-x64/*
 
 
 # ignore backup files
+*~
 *.~

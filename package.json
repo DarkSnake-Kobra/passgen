@@ -7,9 +7,8 @@
     "electron": "^1.4.13"
   },
   "description": "Simple password generator",
-  "devDependencies": {},
   "scripts": {
-	  "start": "electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
