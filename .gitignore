@@ -7,3 +7,4 @@ passgen-win-x64/*
 # ignore backup files
 *~
 *.~
+*.swp
