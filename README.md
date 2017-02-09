@@ -19,7 +19,7 @@ Placed under the Apache 2 license.
 
 # Todo
 * Add config file
-* Add log file for created passwords
+* Add log file for created passwords (done)
 * Make it pretty (white theme is ugly)
 
 # FAQ
