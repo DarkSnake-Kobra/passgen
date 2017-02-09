@@ -1,4 +1,7 @@
-function PASSGEN()
+var fs = require('fs');
+var saveToLog;
+
+function passgen()
 {
     var numbers_state;
 	var symbols_state;
@@ -8,23 +11,23 @@ function PASSGEN()
 
 	if (numbers_state == true)
 	{
-		NUMBERS();
+		numbers();
 	}
     if (numbers_state == false)
     {
-        ALPHABET();
+        alphabet();
     }
     if (symbols_state == true && numbers_state == true)
     {
-        GENERATE_EVERYTHING();
+        createAll();
     }
     if (symbols_state == true && numbers_state == false)
     {
-        SYMBOLS();
+        symbols();
     }
 }
 
-function NUMBERS()
+function numbers()
 {
 		
 	// store letters and get length
@@ -34,20 +37,22 @@ function NUMBERS()
 	var count = 0;
 	var temp;
 	var password = "";
-	var characters_length = characters.length;
+	var charLength = characters.length;
 
 	size = document.getElementById('size').value;
 
 	while(count < size)
 	{
-	  temp = Math.floor((Math.random() * characters_length));
+	  temp = Math.floor((Math.random() * charLength));
 	  password += characters.charAt(temp);
 	  count++;
 	}
 	document.getElementById('password').value= password;
+    saveToLog = password;
+    createLog();
 }
 
-function ALPHABET()
+function alphabet()
 {
     // store letters and get length
 	var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -56,20 +61,22 @@ function ALPHABET()
 	var count = 0;
 	var temp;
 	var password = "";
-	var characters_length = characters.length;
+	var charLength = characters.length;
 
 	size = document.getElementById('size').value;
 
 	while(count < size)
 	{
-	  temp = Math.floor((Math.random() * characters_length));
+	  temp = Math.floor((Math.random() * charLength));
 	  password += characters.charAt(temp);
 	  count++;
 	}
 	document.getElementById('password').value= password;
+    saveToLog = password;
+    createLog();
 }
 
-function GENERATE_EVERYTHING()
+function createAll()
 {
     // store letters and get length
 	var characters = "!@#$%^&*()_-+=<>,.?{}[];:0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY";
@@ -78,20 +85,22 @@ function GENERATE_EVERYTHING()
 	var count = 0;
 	var temp;
 	var password = "";
-	var characters_length = characters.length;
+	var charLength = characters.length;
 
 	size = document.getElementById('size').value;
 
 	while(count < size)
 	{
-	  temp = Math.floor((Math.random() * characters_length));
+	  temp = Math.floor((Math.random() * charLength));
 	  password += characters.charAt(temp);
 	  count++;
 	}
 	document.getElementById('password').value= password;
+    saveToLog = password;
+    createLog();
 }
 
-function SYMBOLS()
+function symbols()
 {
      // store letters and get length
 	var characters = "!@#$%^&*()_-+=<>,.?{}[];:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY";
@@ -100,17 +109,19 @@ function SYMBOLS()
 	var count = 0;
 	var temp;
 	var password = "";
-	var characters_length = characters.length;
+	var charLength = characters.length;
 
 	size = document.getElementById('size').value;
 
 	while(count < size)
 	{
-	  temp = Math.floor((Math.random() * characters_length));
+	  temp = Math.floor((Math.random() * charLength));
 	  password += characters.charAt(temp);
 	  count++;
 	}
 	document.getElementById('password').value= password;
+    saveToLog = password;
+    createLog();
 }
 
 function reset()
@@ -125,6 +136,15 @@ function about()
 	"Website: jordanbottoms.com");
 }
 
+
+function createLog()
+{
+    saveToLog = saveToLog + '\n'
+    fs.appendFile('log', saveToLog,(err) => {
+    if (err) throw err;
+    console.log('The "data to append" was appended to file!');
+});
+}
 function closeWin()
 {
 	window.close();
