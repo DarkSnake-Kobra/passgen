@@ -140,7 +140,7 @@ function about()
 function createLog()
 {
     saveToLog = saveToLog + '\n'
-    log = __dirname +"\\" + "log"
+    log = __dirname +"\\" + "data" + "\\" + "log"
     fs.appendFile(log, saveToLog,(err) => {
     if (err) throw err;
     console.log('The "data to append" was appended to file!');
