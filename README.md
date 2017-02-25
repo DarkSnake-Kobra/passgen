@@ -1,9 +1,4 @@
-# Test branch
-This is a nodejs with electron build. The plan is to replace
-the java build in the future. There is still a bit to work on.
-
-# License
-Placed under the Apache 2 license.
+# Development Branch
 
 # Build Commands
 * electron-packager . --platform=win32 --arch=x64
@@ -11,7 +6,7 @@ Placed under the Apache 2 license.
 
 # Requirements
 * Windows/Linux
-* Nodejs 7.x
+* Node.js 6.10.0+
 
 # Required Node Modules
 * electron
@@ -23,3 +18,5 @@ Placed under the Apache 2 license.
 * Make it pretty (white theme is ugly)
 
 # FAQ
+Q. Do you support Mac?
+A. I do not own a Mac and have no interest atm.
