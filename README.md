@@ -18,7 +18,7 @@ Placed under the Apache 2 license.
 * electron-packager
 
 # Todo
-* Add config file
+* Add config file (done)
 * Add log file for created passwords (done)
 * Make it pretty (white theme is ugly)
 
