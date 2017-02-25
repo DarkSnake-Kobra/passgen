@@ -14,7 +14,7 @@
 				<h2 style="text-align: center;"></h2>
 				<fieldset id="passGen" class="passGen">
 					<label for="size">Password Size:</label>
-					<input name="size" id="size" value="20"/><br>
+					<input name="size" id="size" value=""/><br>
 
 					<label for="password">Password is:</label>
 					<input name="password" id="password" title="Alphabetical characters will always be generated regardless and at the very least if no option is selected."/>
@@ -24,14 +24,17 @@
 				<input type="checkbox" id="numbers" name="numbers" value="0" checked="checked">
                 <label for="symbols">Symbols</label>
                 <input type="checkbox" id="symbols" name="symbols" value="0">
+                
 			</fieldset>
 			<button onclick="passgen()">Create Password</button>
 			<button onclick="reset()">Clear</button>
 			<button onclick="about()">About</button>
+			<button onclick="saveSettings()">Save Settings</button>
 			<button onclick="closeWin()">Close</button>
 			</article>
-			<article>
-			</article>
+			<script>
+				readConfig();
+			</script>
 		</section>
 	</body>
 
