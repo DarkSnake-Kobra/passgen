@@ -1,4 +1,5 @@
-# Development Branch
+# Stable Branch
+Future release builds are built on this branch.
 
 # Build Commands
 * electron-packager . --platform=win32 --arch=x64
