@@ -1,6 +1,7 @@
-var fs = require('fs');
-var saveToLog;
-var configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
+/* passgen
+ * 
+ * This contains the password generator and quit functions only. 
+ * To keep it neat I moved everything else to extras.js*/
 
 function passgen()
 {
@@ -49,7 +50,6 @@ function numbers()
 	  count++;
 	}
 	document.getElementById('password').value= password;
-    saveToLog = password;
     createLog();
 }
 
@@ -73,7 +73,6 @@ function alphabet()
 	  count++;
 	}
 	document.getElementById('password').value= password;
-    saveToLog = password;
     createLog();
 }
 
@@ -97,7 +96,6 @@ function createAll()
 	  count++;
 	}
 	document.getElementById('password').value= password;
-    saveToLog = password;
     createLog();
 }
 
@@ -121,50 +119,10 @@ function symbols()
 	  count++;
 	}
 	document.getElementById('password').value= password;
-    saveToLog = password;
     createLog();
 }
 
-function reset()
-{
-	document.getElementById('password').value= "";
-}
 
-function about()
-{
-	alert("Copyright (c) 2017 Jordan Bottoms\n" +
-	"Released under the Apache 2 License\n" +
-	"Website: jordanbottoms.com", "About");
-}
-
-function readConfig()
-{
-    var config = fs.readFileSync(configPath, 'utf8');
-    document.getElementById('size').value= config;
-}
-
-function createLog()
-{
-    saveToLog = saveToLog + '\n'
-    log = __dirname +"\\" + "data" + "\\" + "backup.log"
-    fs.appendFile(log, saveToLog,(err) => {
-    if (err) throw err;
-    console.log('The "data to append" was appended to file!');
-});
-}
-
-function saveSettings()
-{
-	var size = document.getElementById('size').value;
-	fs.writeFile(configPath, size, function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("The file was saved!");
-    alert("Settings saved", "Alert");
-}); 
-}
 
 function closeWin()
 {
