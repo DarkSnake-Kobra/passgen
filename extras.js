@@ -15,7 +15,7 @@ function createLog()
 });
 }
 
-function reset()
+function clear()
 {
 	document.getElementById('password').value= "";
 }
@@ -46,4 +46,8 @@ function saveSettings()
     console.log("The file was saved!");
     alert("Settings saved", "Alert");
 }); 
+}
+
+function help(){
+	alert("Settings and backup file are located in the passgen install folder then '/resources/app/data' ", "Help");
 }

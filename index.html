@@ -6,6 +6,7 @@
 		<meta name="author" content="Jordan Bottoms"/>
 		<script src="app.js"> </script>
 		<script src="extras.js"> </script>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
 		<title>Simple Password Generator</title>
 	</head>
 
@@ -25,19 +26,22 @@
 				<input type="checkbox" id="numbers" name="numbers" value="0" checked="checked">
                 <label for="symbols">Symbols</label>
                 <input type="checkbox" id="symbols" name="symbols" value="0">
-                
 			</fieldset>
-			<button onclick="passgen()">Create Password</button>
-			<button onclick="reset()">Clear</button>
-			<button onclick="about()">About</button>
-			<button onclick="saveSettings()">Save Settings</button>
+			<fieldset id="extras" class="extras">
+				<button onclick="passgen()">Create Password</button>
+				<button onclick="clear()">Clear</button>
+				<button onclick="saveSettings()">Save Settings</button>
+			</fieldset>
+			<fieldset id="help" class="help">
+				<button onclick="help()">Help</button>
+				<button onclick="about()">About</button>
+			</fieldset>
 			</article>
 			<script>
 				readConfig();
 			</script>
 		</section>
-		<p>Settings and backup file are located under 'installFolder/resources/app/data' where installFolder is wherever passgen program is located.</p>
-		<button onclick="closeWin()">Close</button>
+		<button onclick="closeWin()" class="closeBtn">Close</button>
 	</body>
 
 </html>

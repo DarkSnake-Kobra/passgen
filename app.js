@@ -2,7 +2,7 @@
  * 
  * This contains the password generator and quit functions only. 
  * To keep it neat I moved everything else to extras.js*/
-
+ 
 function passgen()
 {
     var numbers_state;
