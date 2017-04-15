@@ -3,126 +3,92 @@
  * This contains the password generator and quit functions only. 
  * To keep it neat I moved everything else to extras.js*/
 
-function passgen()
-{
-    var numbers_state;
-	var symbols_state;
+function passgen(){
+	
+	/* Determine checked boxes checked state
+	 * then call appropriate functions
+	 */
+	var numbersState;
+	var symbolsState;
 
-	numbers_state = document.getElementById('numbers').checked;
-    symbols_state = document.getElementById('symbols').checked;
+	numbersState = document.getElementById('numbers').checked;
+    symbolsState = document.getElementById('symbols').checked;
 
-	if (numbers_state == true)
+	if (numbersState == true)
 	{
 		numbers();
 	}
-    if (numbers_state == false)
+    if (numbersState == false)
     {
         alphabet();
     }
-    if (symbols_state == true && numbers_state == true)
+    if (symbolsState == true && numbersState == true)
     {
         createAll();
     }
-    if (symbols_state == true && numbers_state == false)
+    if (symbolsState == true && numbersState == false)
     {
         symbols();
     }
 }
 
-function numbers()
-{
-		
-	// store letters and get length
+function numbers(){
+	// Set characters to lower/upper case
+	// and numbers
 	var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	var size;
-	var count = 0;
-	var temp;
-	var password = "";
-	var charLength = characters.length;
-
-	size = document.getElementById('size').value;
-
-	while(count < size)
-	{
-	  temp = Math.floor((Math.random() * charLength));
-	  password += characters.charAt(temp);
-	  count++;
-	}
-	document.getElementById('password').value= password;
-    createLog();
+	random(characters);
 }
 
-function alphabet()
-{
+function alphabet(){
     // store letters and get length
 	var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	var size;
-	var count = 0;
-	var temp;
-	var password = "";
-	var charLength = characters.length;
-
-	size = document.getElementById('size').value;
-
-	while(count < size)
-	{
-	  temp = Math.floor((Math.random() * charLength));
-	  password += characters.charAt(temp);
-	  count++;
-	}
-	document.getElementById('password').value= password;
-    createLog();
+	random(characters);
 }
 
 function createAll()
 {
     // store letters and get length
 	var characters = "!@#$%^&*()_-+=<>,.?{}[];:0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY";
-
-	var size;
-	var count = 0;
-	var temp;
-	var password = "";
-	var charLength = characters.length;
-
-	size = document.getElementById('size').value;
-
-	while(count < size)
-	{
-	  temp = Math.floor((Math.random() * charLength));
-	  password += characters.charAt(temp);
-	  count++;
-	}
-	document.getElementById('password').value= password;
-    createLog();
+	random(characters);
 }
 
-function symbols()
-{
+function symbols(){
      // store letters and get length
 	var characters = "!@#$%^&*()_-+=<>,.?{}[];:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY";
+	random(characters);
+}
 
+function random(characters){
+	var c = characters;
 	var size;
 	var count = 0;
 	var temp;
 	var password = "";
 	var charLength = characters.length;
 
+	// get size text boxes value
+	// to determine password size
 	size = document.getElementById('size').value;
 
-	while(count < size)
-	{
+	/* Loop through the characters variable
+	 * by using the length as the end and
+	 * store the retrieved value in temp then
+	 * increment it by 1 and stopping if greater
+	 * then size variable
+	 */
+	while(count < size){
 	  temp = Math.floor((Math.random() * charLength));
 	  password += characters.charAt(temp);
 	  count++;
 	}
+	
+	/* Set password box to password variable
+	 * then call the log funtion that stores
+	 * the password in the log file for backup
+	 */
 	document.getElementById('password').value= password;
     createLog();
 }
-
-
 
 function closeWin()
 {
