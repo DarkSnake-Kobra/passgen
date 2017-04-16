@@ -13,20 +13,12 @@
    limitations under the License.
 */
 
-/* Main application */
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow
 
-var mainWindow = null;
+/* window calls and related functions
+ * 
+ * This contains the password generator and quit functions only. 
+ * To keep it neat I moved everything else to extras.js*/
 
-app.on('ready', () => 
-{
-	mainWindow = new BrowserWindow({ width: 500, height: 300, resizable: false})
-	mainWindow.loadURL('file://' + __dirname + '/index.html');
-})
-
-app.on('window-all-closed', () => 
-{
-  app.quit()
-})
+function closeWin(){
+	window.close();
+}

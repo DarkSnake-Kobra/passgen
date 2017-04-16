@@ -13,20 +13,12 @@
    limitations under the License.
 */
 
-/* Main application */
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow
-
-var mainWindow = null;
-
-app.on('ready', () => 
-{
-	mainWindow = new BrowserWindow({ width: 500, height: 300, resizable: false})
-	mainWindow.loadURL('file://' + __dirname + '/index.html');
-})
-
-app.on('window-all-closed', () => 
-{
-  app.quit()
-})
+/* create and call help window. currently being worked on.*/
+/*function help(){
+	const {app, BrowserWindow} = require('electron');
+	let win = new BrowserWindow({width: 500, height: 300})
+	win.on('closed', () => {
+		win = null
+		})
+		win.loadURL(`file://${__dirname}/app/help.html`)
+}*/

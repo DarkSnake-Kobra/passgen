@@ -105,10 +105,3 @@ function random(characters){
 	document.getElementById('password').value= password;
     createLog();
 }
-
-function help(){
-	window.open("help.html");
-}
-function closeWin(){
-	window.close();
-}

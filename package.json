@@ -2,7 +2,7 @@
   "name": "passgen",
   "productName": "passgen",
   "version": "0.1.0",
-  "main": "passgen.js",
+  "main": "./app/main.js",
   "dependencies": {
     "electron": "^1.4.13"
   },

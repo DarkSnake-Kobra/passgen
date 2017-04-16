@@ -4,14 +4,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="author" content="Jordan Bottoms"/>
-		<script src="app.js"> </script>
+		<script src="passgen.js"> </script>
 		<script src="extras.js"> </script>
+		<script src="windows.js"></script>
+		<script src="help.js"></script>
 		<link href="styles.css" rel="stylesheet" type="text/css" />
 		<title>Simple Password Generator</title>
 	</head>
 
 	<body>
-		<section class="content">
+		<section>
 			<article>
 				<h2 style="text-align: center;"></h2>
 				<fieldset id="passGen" class="passGen">
@@ -32,7 +34,7 @@
 				<button onclick="clr()">Clear</button>
 				<button onclick="saveSettings()">Save Settings</button>
 			</fieldset>
-			<fieldset id="help" class="help">
+			<fieldset id="helpField" class="helpField">
 				<button onclick="help()">Help</button>
 				<button onclick="about()">About</button>
 			</fieldset>

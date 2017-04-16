@@ -61,7 +61,7 @@ function saveSettings()
     alert("Settings saved", "Alert");
 }); 
 }
-/*function help(){
+function help(){
 	alert("Settings and backup file are located in the passgen install folder then '/resources/app/data' ", "Help");
-} */
+}
 
