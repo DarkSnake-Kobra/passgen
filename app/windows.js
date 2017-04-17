@@ -14,10 +14,16 @@
 */
 
 
-/* window calls and related functions
- * 
- * This contains the password generator and quit functions only. 
- * To keep it neat I moved everything else to extras.js*/
+/* To be used later to store window functions.*/
+
+/*function help(){
+	const {app, BrowserWindow} = require('electron');
+	let win = new BrowserWindow({width: 500, height: 300})
+	win.on('closed', () => {
+		win = null
+		})
+		win.loadURL(`file://${__dirname}/app/help.html`)
+}*/
 
 function closeWin(){
 	window.close();

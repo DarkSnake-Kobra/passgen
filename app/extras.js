@@ -12,11 +12,13 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-/* Contains everything else aside from closing the program
- * and password generator.*/
+
+
+/* Extra components such as creating backup log for recovery and
+ * save settings. Also currently contains the about and help information
+ * which will later be in their own window..*/
 
 var fs = require('fs');
-var configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
 function createLog()
 {
 	var saveToLog = document.getElementById('password').value;
@@ -43,14 +45,14 @@ function about()
 
 function readConfig()
 {
+	var configPath = getConfigPath();
     var config = fs.readFileSync(configPath, 'utf8');
     document.getElementById('size').value= config;
 }
 
-
-
 function saveSettings()
 {
+	var configPath = getConfigPath();
 	var size = document.getElementById('size').value;
 	fs.writeFile(configPath, size, function(err) {
     if(err) {
@@ -60,6 +62,11 @@ function saveSettings()
     console.log("The file was saved!");
     alert("Settings saved", "Alert");
 }); 
+}
+
+function getConfigPath(){
+	var configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
+	return configPath;
 }
 function help(){
 	alert("Settings and backup file are located in the passgen install folder then '/resources/app/data' ", "Help");

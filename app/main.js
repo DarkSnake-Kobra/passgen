@@ -13,7 +13,9 @@
    limitations under the License.
 */
 
-/* Main application */
+/* main process
+ * 
+ * creates main window then calls it*/
 const {app, BrowserWindow} = require('electron');
 
 var mainWindow = null;

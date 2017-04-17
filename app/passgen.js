@@ -16,8 +16,7 @@
 
 /* passgen
  * 
- * This contains the password generator and quit functions only. 
- * To keep it neat I moved everything else to extras.js*/
+ * Core of the program. Creates password and returns it to the window to display it*/
  
 function passgen(){
 	
