@@ -43,13 +43,6 @@ function about()
 	"Website: jordanbottoms.com", "About");
 }
 
-function readConfig()
-{
-	var configPath = getConfigPath();
-    var config = fs.readFileSync(configPath, 'utf8');
-    document.getElementById('size').value= config;
-}
-
 function saveSettings()
 {
 	var configPath = getConfigPath();
@@ -61,14 +54,8 @@ function saveSettings()
 
     console.log("The file was saved!");
     alert("Settings saved", "Alert");
-}); 
-}
-
-function getConfigPath(){
-	var configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
-	return configPath;
+});
 }
 function help(){
 	alert("Settings and backup file are located in the passgen install folder then '/resources/app/data' ", "Help");
 }
-

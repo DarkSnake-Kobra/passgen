@@ -7,6 +7,7 @@
 		<script src="passgen.js"> </script>
 		<script src="extras.js"> </script>
 		<script src="windows.js"></script>
+		<script src="preload.js"></script>
 		<link href="styles.css" rel="stylesheet" type="text/css" />
 		<title>Simple Password Generator</title>
 	</head>
@@ -25,7 +26,7 @@
 				<label for="numbers">Numbers</label>
 				<input type="checkbox" id="numbers" name="numbers" value="0" checked="checked">
                 <label for="symbols">Symbols</label>
-                <input type="checkbox" id="symbols" name="symbols" value="0"> 
+                <input type="checkbox" id="symbols" name="symbols" value="0">
                 <label for="saveLogState">Backup Log</label>
 				<input type="checkbox" id="saveLogState" name="saveLogState" value="0" title="Determines if a backup log will be created. Disabled by default.">
 			</fieldset>
@@ -33,7 +34,7 @@
 				<button onclick="passgen()">Create Password</button>
 				<button onclick="clr()">Clear</button>
 				<button onclick="saveSettings()">Save Settings</button>
-				
+
 			</fieldset>
 			<fieldset id="helpField" class="helpField">
 				<button onclick="help()">Help</button>
