@@ -1,6 +1,7 @@
 
 /*  Load critical functions. In the future make sure to load up before anything else.*/
 const platform = ('./platform.js');
+const os = require ('os');
 
 function readConfig(){
 	var configPath = getConfigPath();
@@ -9,6 +10,14 @@ function readConfig(){
 }
 
 function getConfigPath(){
-	var configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
-	return configPath;
+	var osType = os.platform();
+	var configPath;
+	if (osType == "win32"){
+		configPath =__dirname + "\\" + "data" + "\\" + "settings.conf";
+		return configPath;
+	}
+	if (osType == "linux"){
+		configPath = __dirname + "//" + "data" + "//" + "settings.conf";
+		return configPath;
+	}
 }
