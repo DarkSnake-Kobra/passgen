@@ -25,7 +25,7 @@ function passgen(){
 	var symbolsState;
 
 	numbersState = document.getElementById('numbers').checked;
-    symbolsState = document.getElementById('symbols').checked;
+  symbolsState = document.getElementById('symbols').checked;
 
 	if (numbersState == true)
 	{
@@ -43,6 +43,7 @@ function passgen(){
     {
         symbols();
     }
+
 }
 
 function numbers(){

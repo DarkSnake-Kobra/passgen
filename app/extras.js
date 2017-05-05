@@ -56,8 +56,10 @@ function clr()
 
 function about()
 {
+
 	alert("Copyright (c) 2017 Jordan Bottoms\n" +
 	"Released under the MIT License\n" +
+	"Node.js Version: " + nodeVersion +
 	"Website: jordanbottoms.com", "About");
 }
 

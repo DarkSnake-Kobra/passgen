@@ -15,6 +15,7 @@ THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /*  Load critical functions. In the future make sure to load up before anything else.*/
 const platform = ('./platform.js');
 const os = require ('os');
+var nodeVersion = "";
 
 function readConfig(){
 	var configPath = getConfigPath();
@@ -33,4 +34,22 @@ function getConfigPath(){
 		configPath = __dirname + "//" + "data" + "//" + "settings.conf";
 		return configPath;
 	}
+}
+
+function getNodeVersion(){
+	var spawn = require('child_process').spawn;
+	var node = spawn('node', ['-v']);
+	node.stdout.on('data', (data) => {
+		console.log(`stdout: ${data}`);
+		nodeVersion = data.toString();
+	});
+
+	node.on('close', (code) => {
+		console.log(`child process exited with code ${code}`);
+	});
+}
+
+function preLoad(){
+	getNodeVersion()
+	readConfig();
 }
